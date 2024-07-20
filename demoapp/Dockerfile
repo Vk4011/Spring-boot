@@ -1,6 +1,6 @@
-FROM openjdk:21-jdk-alpine
-RUN addgroup -S spring && adduser -S spring -G spring
+FROM openjdk:21-slim
+RUN addgroup --system spring && adduser --system --ingroup spring spring
 USER spring:spring
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]

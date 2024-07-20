@@ -1,0 +1,14 @@
+# Ignore Maven target directory
+target/
+
+# Ignore local environment files
+*.log
+*.tmp
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore other files
+.DS_Store
+*.swp
